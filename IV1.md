@@ -5,13 +5,13 @@ Alumno: Sergio Muñoz Gamarra
 
 Ejercicio 1
 
-	El servidor elegido ha sido un servidor HP Proliant de la tienda de informática Dynos, su precio es de 1645 €.
+El servidor elegido ha sido un servidor HP Proliant de la tienda de informática Dynos, su precio es de 1645 €.
 
-	Adem�s sabemos que para calcular el coste de amortización a cuatro años habrá que realizarle el 25% al precio del producto sin IVA, es decir, el precio de amortización:
+Además sabemos que para calcular el coste de amortización a cuatro años habrá que realizarle el 25% al precio del producto sin IVA, es decir, el precio de amortización:
 
 	Amort = (1645 - 1645*0,21) * 0,25 = 324,8875 €/año
 
-	Teniendo en cuenta que 100% entre 7 años es igual al 14,28%, la amortización a siete años será gual a:
+Teniendo en cuenta que 100% entre 7 años es igual al 14,28%, la amortización a siete años será gual a:
 	
 	Amort7 = (1645 - 1645*0,21) * 0,1428 = 185,57574 €/año
 
@@ -25,6 +25,11 @@ Para este ejercicio utilizaremos los precios de amazon y 1&1, por una parte tene
 y por otra parte tenemos los precios de servidores de alojamiento:
 - Dinahost: 50,3 €/mes
 - Amazon: 53,70 €/mes
+
+Ejercicio 5
+
+Para la instalación solamente debemos ejecutar el siguiente comando:
+	sudo apt-get install git
 
 Ejercicio 6
 
@@ -77,5 +82,29 @@ group UsuariosLimitados {
 
 De este modo limitamos al 30% del uso de CPU a este grupo
 
+Ejercicio 9
+
+Lo primero que haremos será buscar la información de nuestro procesador en el fichero /proc/cpuinfo. De este fichero hemos obtenido la siguiente información:
+Procesador Intel i5 2.40GHz cada uno
+
+Los flags que me apareceren para cada procesador son los siguientes:
+
+	flags   	 : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+	flags   	 : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+	flags   	 : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+	flags   	 : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+
+
+Ejercicio 10
+
+Para utilizar kvm-ok lo primero que debemos hacer es instalar el paquete cpu-checker (sudo apt-get install cpu-checker). Una vez instalado el paquete podemos utilzar el comando 'kmv-ok'.
+A partir de este comando obtenemos:
+	INFO: /dev/kvm does not exist
+	HINT:   sudo modprobe kvm_intel
+	INFO: For more detailed results, you should run this as root
+	HINT:   sudo /usr/sbin/kvm-ok
+Lo que quiere decir que en mi caso el módulo módulo KVM NO está activo.
+
+Ejercicio 12
 
 
