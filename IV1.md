@@ -61,8 +61,15 @@ Una vez que tenemos los subgrupos les asignamos sus aplicaciones y la ejecutamos
 
 Tan solo nos queda comprobar los resultados dentro de los directorios de ejercicio7 dedicados a las tres aplicaciones, quedando los siguientes datos:
 
+					Gedit			Firefox			Python
 
+	cpuacct.stat			user 23 system 27	user 97 system 566	user: 405 system: 51
 
+	cpuacct.usage			564098477		18306743320		4761160601
+
+	cpuacct.usage_percpu		564098477		18306743320		4761160601
+
+	memory.max_usage_in_bytes	11563008		262348800		77271040
 
 
 En este caso en el porcentaje de cpu debería aparecer cuanta cpu ha consumido cada procesador, en mi casa estoy usando una máquina virtual a la que solo hay asignada un cpu.
@@ -74,11 +81,11 @@ Ejercicio 8
 
 El fichero que se ha de modificar para dicho fin es el fichero /etc/cgconfig.conf. Un ejemplo de creación de política restrictiva con los recursos sería la siguiente:
 
-group UsuariosLimitados {
-	cpu {
-		cpu.shares = 30
+	group UsuariosLimitados {
+		cpu {
+			cpu.shares = 30
+		}
 	}
-}
 
 De este modo limitamos al 30% del uso de CPU a este grupo
 
@@ -99,12 +106,20 @@ Ejercicio 10
 
 Para utilizar kvm-ok lo primero que debemos hacer es instalar el paquete cpu-checker (sudo apt-get install cpu-checker). Una vez instalado el paquete podemos utilzar el comando 'kmv-ok'.
 A partir de este comando obtenemos:
+	
 	INFO: /dev/kvm does not exist
 	HINT:   sudo modprobe kvm_intel
 	INFO: For more detailed results, you should run this as root
 	HINT:   sudo /usr/sbin/kvm-ok
+
 Lo que quiere decir que en mi caso el módulo módulo KVM NO está activo.
 
 Ejercicio 12
 
+En este ejercicio el entorno virtual de programación elegido es virtualenv para Python. La instalación es sencilla, tan solo debemos ejecutar el siguiente comando:
 
+	pip3 install virtualenv
+	
+Una vez instalado solo quedará arrancarlo con:
+
+	virtualenv ENV
