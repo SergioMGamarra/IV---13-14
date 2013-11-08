@@ -1,0 +1,35 @@
+*Ejercicios Tema 2
+
+**Ejercicio 1
+
+Para crear un espacio de nombres utilizaremos el siguiente comando:
+  unshare -u /bin/bash
+  
+Una vez creado el espacio de nombres vamos a crear un directorio en el que montaremos la imagen iso:
+  mkdir -p /mountISO
+
+Después de esto ya podremos montar la ISO, para el que usaremos el comando mount:
+  mount -o loop ~/Descargas/
+  
+Una vez hecho esto tan solo nos queda comprobar que se ha montado bien la imagen con el comando:
+  df -h
+  
+  
+**Ejercicio 2
+
+Para mostrar los puentes de los que dispone nuestro sistema operativo tan solo tendremos que ejecutar el siguiente comando:
+ 
+  brctl show
+
+Para utilizar este comando necesitaremos tener instalado el paquete bridge-utils
+
+
+Por otra parte para crear un interfaz visual usaremos:
+
+  brctl addbr IVirual
+  
+y para asignarlo al interfaz de la tarjeta wifi utilizaremos el siguiente comando:
+  
+  sudo brctl addif IVirtual eth0
+  
+y comprobaremos que se ha creado correctamente con la orden anterior: brctl show
