@@ -4,7 +4,7 @@
 
 Lo primero que tenemos que hacer para comenzar a trabajar este tema es la instalación de LXC, que utilizaremos para la creación de contenedores.
 
-![Ejercicio1](https://www.dropbox.com/s/52dgpis1zur99hf/Ej1.png?raw=true)
+![Ejercicio1](https://dl-web.dropbox.com/get/IV/Tema3/Ej1.png?w=AAAzIAzRminrXiiNFghXiBSCW6YK_sgvOVIqOVapO0al-w)
 
 ##Ejercicio 2
 
@@ -16,7 +16,7 @@ y la arrancaremos con:
 
     sudo lxc-start --name primeraCaja
     
-![Ejercicio2a](https://www.dropbox.com/s/0rnhq48etddqgjw/ej2-a.png?raw=true)
+![Ejercicio2a](https://dl-web.dropbox.com/get/IV/Tema3/ej2-a.png?w=AABFUjBWVLNYXdFYQ5ZRyhJkxahB7GLxBbRixqFntK1_EA)
 
 Una vez arrancado el contenedor vamos a comprobar que interfaces se han creado para el contenedor, para ello vamos a usar el comando:
 
@@ -24,7 +24,7 @@ Una vez arrancado el contenedor vamos a comprobar que interfaces se han creado p
     
 Como se puede observar en la siguiente imagen se han creado dos interfaces nuevas para el contenedor:
 
-![Ejercicio2b]()
+![Ejercicio2b](https://dl-web.dropbox.com/get/IV/Tema3/ej2-b.png?w=AABZ_6x-50H1MjuVQMbHRG8T3hTGXD4KzMB5tFJq4ucYPA)
 
 y a continuación vamos a buscar la existencia de nuevos puentes, con:
 
