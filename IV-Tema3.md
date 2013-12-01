@@ -82,4 +82,26 @@ Como se puede ver en la captura de pantalla anterior tengo en iniciadas los dos 
 Otra de las utilidades de esta herramienta es la restricción de recursos. En mi caso para realizar el ejercicio voy a limitar los recursos al contenedor Fedora del ejercicio anterior, de la siguiente forma:
 
 
+##Ejercicio 6
+
+Lo primero que debemos es añadir el repositorio de juju:
+
+    sudo add-apt-repository ppa:juju/stable
     
+Tras actualizar vamos a instalar el paquete de juju:
+
+    sudo apt-get install juju-core juju juju-local
+    
+A continuación estableceremos local como sistema por defecto:
+
+    sudo nano /root/.juju/enviroment
+
+Dentro de dicho fichero estableceremos local por defecto:
+
+EJERCICIO6-1.PNG
+
+En mi caso ya tengo instalado MongoDB, pero en caso de no tenerlo debemos instalarlo con:
+
+    sudo apt-get install mongodb-server
+    
+
