@@ -62,5 +62,24 @@ Tras la creación del contenedor tan solo nos faltará comprobar su correcto fun
 
     lxc-start -n ContFedora
     
-Al igual que en el caso del contenedor Debian tanto el usuario como la contraseña serán root por defecto.
+Al igual que en el caso del contenedor Debian tanto el usuario como la contraseña serán root por defecto. En la siguiente captura de pantalla perteneciente al ejercicio 4 podremos ver como ambos contenedores están en funcionamiento.
 
+##Ejercicio 4
+
+Para instalar lxc-webpanel vamos a utilizar los siguientes comandos:
+
+    sudo su
+    sudo wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+    
+Una vez instalada vamos a utilizarla introduciendo en el navegador la siguiente dirección, teniendo en cuenta que el usuario y la contraseña serán 'admin':
+
+    http://localhost:5000
+    
+Como podemos ver en esta primera captura de pantalla desde la página principal podremos visualizar los recursos que se están consumiendo, los contendores que tenemos creados y cuales de ellos están en funcionamiento.
+La primera gran utilidad que se le encuentra a esta herramienta es la de iniciar, parar o pausar cualquier contenedor.
+Como se puede ver en la captura de pantalla anterior tengo en iniciadas los dos contenedores del ejercicio anterior.
+
+Otra de las utilidades de esta herramienta es la restricción de recursos. En mi caso para realizar el ejercicio voy a limitar los recursos al contenedor Fedora del ejercicio anterior, de la siguiente forma:
+
+
+    
