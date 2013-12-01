@@ -36,3 +36,31 @@ dando como resultado:
 
 y como podemos observar en la captura de pantalla se ha creado un puente. Dicho puente se ha creado con la función de dar conexión a internet al contenedor.
 
+
+##Ejercicio 3
+
+Para crear un contenedor basado en Debian vamos e ejecutar el siguiente comando:
+    
+    lxc-create -n ContDebian -t debian
+    
+Tras instalarlo, tan sólo quedará ver si se creó correctamente con:
+
+    lxc-start -n ContDebian
+    
+Tras la ejecución de este comando tendremos lanzado nuestro contenedor.
+Información adicional: Es importante saber que el login y el password que se crean por defecto es root, tanto para el password como para el nombre de usuario.
+
+Para la segunda parte, para instalar un contenedor Fedora en un sistema Debian se utilizará el siguiente comando:
+
+    lxc-create -t fedora -n ContFedora
+    
+Al lanzar dicho comando nos aparecerá un aviso de que es necesario tener instalados los paquetes yum y curl; así que antes de volver a intertar crear el contenedor Fedora lo primero que debemos lanzar es la instalación de dichos paquetes:
+
+    apt-get install yum curl
+    
+Tras la creación del contenedor tan solo nos faltará comprobar su correcto funcionamiento arrancandolo con el siguiente comando:
+
+    lxc-start -n ContFedora
+    
+Al igual que en el caso del contenedor Debian tanto el usuario como la contraseña serán root por defecto.
+
