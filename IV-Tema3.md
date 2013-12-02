@@ -105,3 +105,17 @@ En mi caso ya tengo instalado MongoDB, pero en caso de no tenerlo debemos instal
     sudo apt-get install mongodb-server
     
 
+
+##Ejercicio 8
+
+Lo primero que tenemos que hacer es instalar el cpu-checker,kvm y libvirt para tener disponible kvm-ok:
+
+    sudo apt-get install cpu-checker kvm libvirt-bin
+
+Y tenemos que agregar un usuario con:
+
+    sudo adduser $USER libvirtd
+    
+
+
+
