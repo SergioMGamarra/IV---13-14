@@ -117,5 +117,16 @@ Y tenemos que agregar un usuario con:
     sudo adduser $USER libvirtd
     
 
+##Ejercicio 9
+
+Para utilizar virt-install lo único que necesitaremos será instalar libvirt y algunos de sus complementos, para lo que usaremos el siguiente comando:
+
+    sudo apt-get install libvirt-bin virt-viewer virtinst 
+    
+Una vez instalado instalaremos un contenedor con el siguiente comando:
+
+    sudo virt-install --name virtInstall --ram 256 --file=/home/sergio/Escritorio/virtInstall/ubuntu-13.10-desktop-amd64.img --file-size=1 --cdrom=/home/sergio/Escritorio/virtInstall/ubuntu-13.10-desktop-amd64.iso
+    
+    
 
 
