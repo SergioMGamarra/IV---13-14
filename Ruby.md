@@ -9,6 +9,7 @@ Para la instalación de ruby en Ubuntu tan solo necesitaremos instralar los paqu
     
 Una vez instalado comprobaremos que versión es con 'ruby --version'
 
+![Ejercicio1](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/Ejercicio1.png?raw=true)
 
 ## Ejercicio 2
 
