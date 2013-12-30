@@ -74,7 +74,7 @@ En este programa lo que se podrá ver será la URL que se quiera utilizar, la fe
 
 Obteniendo la siguiente salida:
 
-[Ejercicio4](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ej4.png?raw=true)
+![Ejercicio4](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ej4.png?raw=true)
 
 
 ## Ejercicio 5
