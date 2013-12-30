@@ -4,7 +4,7 @@
 
 Lo primero que tenemos que hacer para comenzar a trabajar este tema es la instalación de LXC, que utilizaremos para la creación de contenedores.
 
-![Ejercicio1](https://dl-web.dropbox.com/get/IV/Tema3/Ej1.png?w=AAAzIAzRminrXiiNFghXiBSCW6YK_sgvOVIqOVapO0al-w)
+![Ejercicio1](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/Ej1.png?raw=true)
 
 ##Ejercicio 2
 
@@ -16,7 +16,7 @@ y la arrancaremos con:
 
     sudo lxc-start --name primeraCaja
     
-![Ejercicio2a](https://dl-web.dropbox.com/get/IV/Tema3/ej2-a.png?w=AABFUjBWVLNYXdFYQ5ZRyhJkxahB7GLxBbRixqFntK1_EA)
+![Ejercicio2a](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ej2-a.png?raw=true)
 
 Una vez arrancado el contenedor vamos a comprobar que interfaces se han creado para el contenedor, para ello vamos a usar el comando:
 
@@ -24,7 +24,7 @@ Una vez arrancado el contenedor vamos a comprobar que interfaces se han creado p
     
 Como se puede observar en la siguiente imagen se han creado dos interfaces nuevas para el contenedor:
 
-![Ejercicio2b](https://dl-web.dropbox.com/get/IV/Tema3/ej2-b.png?w=AABZ_6x-50H1MjuVQMbHRG8T3hTGXD4KzMB5tFJq4ucYPA)
+![Ejercicio2b](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ej2-b.png?raw=true)
 
 y a continuación vamos a buscar la existencia de nuevos puentes, con:
 
@@ -32,7 +32,7 @@ y a continuación vamos a buscar la existencia de nuevos puentes, con:
     
 dando como resultado:
 
-![Ejercicio2c](https://dl-web.dropbox.com/get/IV/Tema3/ejer2-c.png?w=AAAHY1PpXdCRWUaJ5qU0MGAcEI9laI0iTsTQ4nYDgVbKoA)
+![Ejercicio2c](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ejer2-c.png?raw=true)
 
 y como podemos observar en la captura de pantalla se ha creado un puente. Dicho puente se ha creado con la función de dar conexión a internet al contenedor.
 
