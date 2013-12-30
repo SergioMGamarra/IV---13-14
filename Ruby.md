@@ -30,15 +30,53 @@ Obteniendo como salida:
 
 La pregunta a la pregunta en sí, ya que no existen los tipos de variables por lo que la creación de estructuras es totalmente libre poniendo ser mixta. Como ejemplo tenemos el siguiente programa:
     
-    !# /usr/bin/ruby
+    #! /usr/bin/ruby
+
+    array = {:dos_digitos => ['12', '14', '20'], :un_digito => ['1','8', '9']}
     
-    array = { :numeros_un_digito => ['1','3','7','9','2'],
-    		  :numeros_dos_digitos => ['23','43','76','89','12'],
-    		  :numeros_tres_digitos => ['234','765','978','345','234']
-    		}
-    
-    puts array.inspect
+    array.keys().each do |i|
+    	puts array[i]
+    end
+
 
 Obteniendo la siguiente salida:
+
+
+## Ejercicio 4
+
+En este programa lo que se podrá ver será la URL que se quiera utilizar, la fecha de envío de la petición y el servidor del sitio web que hayamos utilizado. Todo esto se consigue con el siguiente código:
+
+    #!/usr/bin/ruby
+    require 'net/http'
+
+	def fecha()
+		respuesta = Net::HTTP.get_response(ARGV[0], '/')
+		return respuesta['date'].to_s
+	end
+
+    def servidor()
+        respuesta = Net::HTTP.get_response(ARGV[0],'/')     
+        return respuesta['server'].to_s
+    end
+
+    url = ARGV[0]
+    puts "URL: " << url
+    puts "Envío de la petición en: " << fecha()
+    puts "Servidor: " << servidor()
+
+
+Obteniendo la siguiente salida:
+
+
+## Ejercicio 5
+
+Para la instalación se usará el siguiente comando:
+
+    sudo gem install vagrant
+    
+Y procederemos a comprobar que esta correctamente instalado con el comando:
+
+    gem search --remote vagrant
+
 
 
