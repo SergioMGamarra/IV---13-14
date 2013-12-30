@@ -7,7 +7,7 @@ Para la instalación de ruby en Ubuntu tan solo necesitaremos instralar los paqu
 
     sudo apt-get install ruby irb rubygems rdoc
     
-Una vez instalado comprobaremos que versión es con 'ruby --version'
+Una vez instalado comprobaremos que versión es con 'ruby --version', en mi caso obtengo:
 
 ![Ejercicio1](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/Ejercicio1.png?raw=true)
 
@@ -24,8 +24,11 @@ El programa diseño mostrará una cantidad de líneas teniendo como límite una 
     	contador += 1
     end
 
+[código](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ruby-iv2.rb)
+
 Obteniendo como salida:
 
+![Ejercicio2](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/salidaEj2.png?raw=true)
 
 ## Ejercicio 3
 
@@ -39,9 +42,11 @@ La pregunta a la pregunta en sí, ya que no existen los tipos de variables por l
     	puts array[i]
     end
 
+[código](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ruby-iv3.rb)
 
 Obteniendo la siguiente salida:
 
+![Ejercicio3](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ejer3.png?raw=true)
 
 ## Ejercicio 4
 
@@ -65,8 +70,11 @@ En este programa lo que se podrá ver será la URL que se quiera utilizar, la fe
     puts "Envío de la petición en: " << fecha()
     puts "Servidor: " << servidor()
 
+[código]([código](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ruby-iv4.rb))
 
 Obteniendo la siguiente salida:
+
+[Ejercicio4](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ej4.png?raw=true)
 
 
 ## Ejercicio 5
