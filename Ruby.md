@@ -70,7 +70,7 @@ En este programa lo que se podrá ver será la URL que se quiera utilizar, la fe
     puts "Envío de la petición en: " << fecha()
     puts "Servidor: " << servidor()
 
-[código]([código](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ruby-iv4.rb))
+[código]([código](https://github.com/SergioMGamarra/IV---13-14/blob/master/Ruby-complem/ruby-iv4.rb)
 
 Obteniendo la siguiente salida:
 
