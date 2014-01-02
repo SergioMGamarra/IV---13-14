@@ -6,4 +6,4 @@ Alumno: Sergio Muñoz Gamarra
 
 La distribución de mi disco duro responde a la estructura que aparece en la siguiente imagen:
 
-!(Ejercicio1a)[https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/ej1-a.png?raw=true]
+![Ejercicio1a](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/ej1-a.png?raw=true)
