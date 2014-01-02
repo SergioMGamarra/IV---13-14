@@ -1,10 +1,12 @@
 #Ejercicios Tema 3
 
+Nota: Faltan algunas cosas por hacer aún (30-12-2013)
+
 ##Ejercicio 1
 
 Lo primero que tenemos que hacer para comenzar a trabajar este tema es la instalación de LXC, que utilizaremos para la creación de contenedores.
 
-![Ejercicio1](https://dl-web.dropbox.com/get/IV/Tema3/Ej1.png?w=AAAzIAzRminrXiiNFghXiBSCW6YK_sgvOVIqOVapO0al-w)
+![Ejercicio1](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/Ej1.png?raw=true)
 
 ##Ejercicio 2
 
@@ -16,7 +18,7 @@ y la arrancaremos con:
 
     sudo lxc-start --name primeraCaja
     
-![Ejercicio2a](https://dl-web.dropbox.com/get/IV/Tema3/ej2-a.png?w=AABFUjBWVLNYXdFYQ5ZRyhJkxahB7GLxBbRixqFntK1_EA)
+![Ejercicio2a](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ej2-a.png?raw=true)
 
 Una vez arrancado el contenedor vamos a comprobar que interfaces se han creado para el contenedor, para ello vamos a usar el comando:
 
@@ -24,7 +26,7 @@ Una vez arrancado el contenedor vamos a comprobar que interfaces se han creado p
     
 Como se puede observar en la siguiente imagen se han creado dos interfaces nuevas para el contenedor:
 
-![Ejercicio2b](https://dl-web.dropbox.com/get/IV/Tema3/ej2-b.png?w=AABZ_6x-50H1MjuVQMbHRG8T3hTGXD4KzMB5tFJq4ucYPA)
+![Ejercicio2b](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ej2-b.png?raw=true)
 
 y a continuación vamos a buscar la existencia de nuevos puentes, con:
 
@@ -32,7 +34,7 @@ y a continuación vamos a buscar la existencia de nuevos puentes, con:
     
 dando como resultado:
 
-![Ejercicio2c](https://dl-web.dropbox.com/get/IV/Tema3/ejer2-c.png?w=AAAHY1PpXdCRWUaJ5qU0MGAcEI9laI0iTsTQ4nYDgVbKoA)
+![Ejercicio2c](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ejer2-c.png?raw=true)
 
 y como podemos observar en la captura de pantalla se ha creado un puente. Dicho puente se ha creado con la función de dar conexión a internet al contenedor.
 
@@ -75,11 +77,15 @@ Una vez instalada vamos a utilizarla introduciendo en el navegador la siguiente 
 
     http://localhost:5000
     
+![Ejercicio4a](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/Ejercicio4-1.png?raw=true)
+    
 Como podemos ver en esta primera captura de pantalla desde la página principal podremos visualizar los recursos que se están consumiendo, los contendores que tenemos creados y cuales de ellos están en funcionamiento.
 La primera gran utilidad que se le encuentra a esta herramienta es la de iniciar, parar o pausar cualquier contenedor.
 Como se puede ver en la captura de pantalla anterior tengo en iniciadas los dos contenedores del ejercicio anterior.
 
 Otra de las utilidades de esta herramienta es la restricción de recursos. En mi caso para realizar el ejercicio voy a limitar los recursos al contenedor Fedora del ejercicio anterior, de la siguiente forma:
+
+![Ejercicio4b](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ejercicio4-2.png?raw=true)
 
 
 ##Ejercicio 6
@@ -98,13 +104,12 @@ A continuación estableceremos local como sistema por defecto:
 
 Dentro de dicho fichero estableceremos local por defecto:
 
-EJERCICIO6-1.PNG
+![Ejercicio6a](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/ejercicio6-1.png?raw=true)
 
 En mi caso ya tengo instalado MongoDB, pero en caso de no tenerlo debemos instalarlo con:
 
     sudo apt-get install mongodb-server
     
-
 
 ##Ejercicio 8
 
@@ -127,6 +132,6 @@ Una vez instalado instalaremos un contenedor con el siguiente comando:
 
     sudo virt-install --name virtInstall --ram 256 --file=/home/sergio/Escritorio/virtInstall/ubuntu-13.10-desktop-amd64.img --file-size=1 --cdrom=/home/sergio/Escritorio/virtInstall/ubuntu-13.10-desktop-amd64.iso
     
-    
+![Ejercicio9](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema3/Ejercicio9-1.png?raw=true)
 
 
