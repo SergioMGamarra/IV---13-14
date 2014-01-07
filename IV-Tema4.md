@@ -15,8 +15,8 @@ En cuanto a los ordenadores de la facultad funcionan a través de un sistema de 
 
 Para este ejercicio lo primero que tendremos que hacer es crear un contenedor, este contenedor debe además tener instalado sshfs fuse:
 
-    lxc-create -t debian -n ContDebian
-    lxc-start -n ContDebian
+    lxc-create -t ubuntu -n caja-ubuntu
+    lxc-start -n caja-ubuntu
     apt-get install sshfs fuse
     
 Además instalaremos sshfs en nuestro local con el comando anterior.
