@@ -46,3 +46,5 @@ Accediendo a nuestro directorio desde el navegador de directorios podemos ver qu
 CAPTURA DIRECTORIO.PNG
 
 
+
+# Ejercicio 3
