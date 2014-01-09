@@ -20,4 +20,29 @@ Para este ejercicio lo primero que tendremos que hacer es crear un contenedor, e
     apt-get install sshfs fuse
     
 Además instalaremos sshfs en nuestro local con el comando anterior.
-Una vez instalados los paquetes necesitamos saber la IP del contenedor, en mi caso: 10.0.3.24
+A continuación debemos crear uin usario al grupo de usuarios de fuse con el siguiente comando:
+    
+    usermod -a -G fuse ubuntu
+
+
+Una vez instalados los paquetes y creado el usuario crearemos el directorio que queremos mapear con el comando:
+
+    mkdir ~/Remoto
+
+
+y creamos otro directorio en nuestro home dónde montaremos el directorio:
+
+    mkdir HomeRemoto
+    
+
+Como último paso nos queda conectarlos a partir de la IP del contenedor, en mi caso: 10.0.3.200, con el siguiente comando:
+
+    sshfs ubuntu@10.0.3.200:/home/ubuntu/Remoto /home/sergio/HomeRemoto
+    
+    CAPTURA sshfs.png
+    
+Accediendo a nuestro directorio desde el navegador de directorios podemos ver que nos encontramos con nuestro directorio remoto:
+
+CAPTURA DIRECTORIO.PNG
+
+
