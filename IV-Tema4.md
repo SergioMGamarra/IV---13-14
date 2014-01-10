@@ -48,3 +48,23 @@ CAPTURA DIRECTORIO.PNG
 
 
 # Ejercicio 3
+
+Para este ejercicio crearé ficheros en formato img y en formato vmdk utilizando como herramienta la biblioteca qemu, y asignandoles un tamaño de 20MB, usando los siguientes comandos:
+
+    
+    qemu-img create -f vmdk vmdk.vmdk 20M
+    qemu-img create -f raw img.img 20M
+    
+EJERCICIO3-CREARIMG
+
+Y a continuación intenté montarlas pero al no estar formateado no es posible, usé:
+
+     mount -o loop,offset=32256 img.img /mnt/
+     mount -o loop,offset=32256 vmdk.vmdk /mnt/
+    
+los cuales me devolvieron el siguiente error:
+
+    mount: debe especificar el tipo de sistema de archivos
+
+    
+    
