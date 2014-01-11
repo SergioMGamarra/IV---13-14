@@ -112,6 +112,10 @@ Para la instalación de ceph se usará:
 
     apt-get install ceph-mds
     
-## Ejercicio 6
+## Ejercicio 7
+
+Inicialmente creamos la piscina:
+
+    rados mkpool piscinaca
 
 
