@@ -147,7 +147,19 @@ pero la instalación no se realizó correctamente, por lo que buscando compañer
 
     npm install -g azure-cli
     
-Esta vez la instalación si se llevo a cabo correctamente.
+Esta vez la instalación si se llevo a cabo correctamente. Ahora vamos a configurar nuestra cuenta para lo que necesitaremos el archivo de configuración, en este caso hablamos del fichero publishSettings, el cuál obtendremos con:
+
+    azure account download
+    
+Cuando ejecutamos el comando se abrirá nuestro navegador y comenzará la descarga, y seguiremos los pasos que nos aparecén en la página que el navegador nos ha abierto, en este caso tan solo tendremos que importamos el fichero de configuración de la cuenta:
+
+    azure account import ~/Descargas/Azpad246MMT5681-1-11-2014-credenctials.publishsettings
+
+Para comprobar que la configuración de la cuenta se ha hecho correctamente comprobaremos las cuentas de azure:
+
+IMG: ACCOUNTAZURELIST.PNG
+
+
 
 
 
