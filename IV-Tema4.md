@@ -118,4 +118,36 @@ Inicialmente creamos la piscina:
 
     rados mkpool piscinaca
 
+PROBLEMA GLOBAL_INIT
+
+
+
+
+
+## Ejercicio 8
+
+Tras crear la cuenta de Azure y recibir el 'pass', seguiré el tutorial que hay adjunto a los apuntes:
+
+- Añadimos el repositorio de node.js:
+    
+    add-apt-repository ppa:chris-lea/node.js
+    apt-get update
+
+- Instalamos node.js
+
+    apt-get install nodejs
+    
+- Instalar Azure con npm
+
+    npm install azure-cli
+    
+IMG: INSTALACIONAZURE.PNG
+
+pero la instalación no se realizó correctamente, por lo que buscando compañeros en la misma situación que yo encontré que José Manuel Colella añadió la opción -g al comando de la instalación, probando nuevamente con:
+
+    npm install -g azure-cli
+    
+Esta vez la instalación si se llevo a cabo correctamente.
+
+
 
