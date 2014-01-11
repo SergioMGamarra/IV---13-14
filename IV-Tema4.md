@@ -2,7 +2,7 @@
 
 Alumno: Sergio Muñoz Gamarra
 
-# Ejercicio 1
+## Ejercicio 1
 
 La distribución de mi disco duro responde a la estructura que aparece en la siguiente imagen:
 
@@ -11,7 +11,7 @@ La distribución de mi disco duro responde a la estructura que aparece en la sig
 
 En cuanto a los ordenadores de la facultad funcionan a través de un sistema de ficheros remoto, usando NFS para devolver los archivos de los usuarios.
 
-# Ejercicio 2
+## Ejercicio 2
 
 Para este ejercicio lo primero que tendremos que hacer es crear un contenedor, este contenedor debe además tener instalado sshfs fuse:
 
@@ -47,7 +47,7 @@ CAPTURA DIRECTORIO.PNG
 
 
 
-# Ejercicio 3
+## Ejercicio 3
 
 Para este ejercicio crearé ficheros en formato img y en formato vmdk utilizando como herramienta la biblioteca qemu, y asignandoles un tamaño de 20MB, usando los siguientes comandos:
 
@@ -67,4 +67,51 @@ los cuales me devolvieron el siguiente error:
     mount: debe especificar el tipo de sistema de archivos
 
     
+## Ejercicio 4
+
+Lo primero que debemos hacer es crear los archivos .img:
+
+    qemu-img create xfs.img 20M
+    qemu-img create -f raw btrfs.img 20M
+
+El siguiente paso es convertirlas en dispositivos loop 
+
+    losetup -v -f xfs.img
+    losetup -v -f btrfs.img
     
+A continuación formatearemos las unidades, utilizando el comando:
+
+    mkfs.xfs /dev/loop0
+    mkfs.btrfs /dev/loop2
+    
+Después de esto crearemos los directorios y montaremos las unidades:
+
+-Creamos los directorios donde los montaremos:
+
+    mkdir /mnt/btrfs
+    
+IMG: BTRFS.PNG 
+    
+    mkdir /mnt/xfs
+
+IMG:XFS.PNG
+
+-Montamos las unidades:
+
+    sudo mount /dev/loop0 /mnt/xfs/
+    sudo mount /dev/loop2 /mnt/btrfs/
+    
+Quedando en perfecto funcionamientos las unidades ya montadas:
+
+IMG: DF.PNG
+
+
+## Ejercicio 5
+
+Para la instalación de ceph se usará:
+
+    apt-get install ceph-mds
+    
+## Ejercicio 6
+
+
