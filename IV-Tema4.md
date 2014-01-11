@@ -159,6 +159,25 @@ Para comprobar que la configuración de la cuenta se ha hecho correctamente comp
 
 IMG: ACCOUNTAZURELIST.PNG
 
+Y por úñtimo creamos una cuenta de almacenamiento:
+
+    azure account storage create sergiogamarra
+    
+Y como pone en una anotación en los apuntes seleccionaremos West Europa como localización (opción 7), continuamos pidiendo las llaves:
+
+    azure account keys list sergiogamarra
+    
+Y configuraremos nuestra cuenta con:
+
+    export AZURE_STORAGE_ACCOUNT=segiogamarra
+    export AZURE_STORAGE_ACCESS_KEY= Clave Primera que nos apareció con el comando donde pedimos las llaves
+    
+y ya tendremos nuestra cuenta de almacenamiento creada y lista para usar:
+
+IMG:CUENTAALMACENAMIENTO.PNG
+
+## Ejercicio 9
+
 
 
 
