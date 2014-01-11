@@ -130,16 +130,16 @@ Tras crear la cuenta de Azure y recibir el 'pass', seguiré el tutorial que hay 
 
 - Añadimos el repositorio de node.js:
     
-    add-apt-repository ppa:chris-lea/node.js
-    apt-get update
+        add-apt-repository ppa:chris-lea/node.js
+        apt-get update
 
 - Instalamos node.js
 
-    apt-get install nodejs
+        apt-get install nodejs
     
 - Instalar Azure con npm
 
-    npm install azure-cli
+        npm install azure-cli
     
 IMG: INSTALACIONAZURE.PNG
 
