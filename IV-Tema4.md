@@ -114,14 +114,18 @@ Para la instalación de ceph se usará:
     
 ## Ejercicio 7
 
-Inicialmente creamos la piscina:
+Lo primero que tenemos que hacer es crear la piscina:
 
-    rados mkpool piscinaca
+    rados mkpool ejer7
 
-PROBLEMA GLOBAL_INIT
+Cuando ya tenemos la piscina creada lo que haremos será añadir un objeto:
 
+    rados put -p ejer7 objeto img.img
 
+Finalmente podemos comprobar que todo ha salido bien con:
 
+    rados lspools
+    rados df
 
 
 ## Ejercicio 8
