@@ -39,23 +39,22 @@ Como último paso nos queda conectarlos a partir de la IP del contenedor, en mi 
 
     sshfs ubuntu@10.0.3.200:/home/ubuntu/Remoto /home/sergio/HomeRemoto
     
-    CAPTURA sshfs.png
+![sshfs](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/Ej2-sshfs.png?raw=true)
     
 Accediendo a nuestro directorio desde el navegador de directorios podemos ver que nos encontramos con nuestro directorio remoto:
 
-CAPTURA DIRECTORIO.PNG
-
+![Directorio](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/directorio.png?raw=true)
 
 
 ## Ejercicio 3
 
 Para este ejercicio crearé ficheros en formato img y en formato vmdk utilizando como herramienta la biblioteca qemu, y asignandoles un tamaño de 20MB, usando los siguientes comandos:
 
-    
     qemu-img create -f vmdk vmdk.vmdk 20M
     qemu-img create -f raw img.img 20M
     
-EJERCICIO3-CREARIMG
+![qemu](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/Ej3-crearImg.png?raw=true)
+
 
 Y a continuación intenté montarlas pero al no estar formateado no es posible, usé:
 
@@ -90,11 +89,11 @@ Después de esto crearemos los directorios y montaremos las unidades:
 
     mkdir /mnt/btrfs
     
-IMG: BTRFS.PNG 
-    
+![btrfs](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/btrfs.png?raw=true)
+
     mkdir /mnt/xfs
 
-IMG:XFS.PNG
+![XFS](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/xfs.png?raw=true)
 
 -Montamos las unidades:
 
@@ -103,8 +102,7 @@ IMG:XFS.PNG
     
 Quedando en perfecto funcionamientos las unidades ya montadas:
 
-IMG: DF.PNG
-
+![DF](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/df.png?raw=true)
 
 ## Ejercicio 5
 
@@ -145,7 +143,7 @@ Tras crear la cuenta de Azure y recibir el 'pass', seguiré el tutorial que hay 
 
         npm install azure-cli
     
-IMG: INSTALACIONAZURE.PNG
+![INSTALACIONAZURE](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/InstalacionAzure.png?raw=true)
 
 pero la instalación no se realizó correctamente, por lo que buscando compañeros en la misma situación que yo encontré que José Manuel Colella añadió la opción -g al comando de la instalación, probando nuevamente con:
 
@@ -161,9 +159,9 @@ Cuando ejecutamos el comando se abrirá nuestro navegador y comenzará la descar
 
 Para comprobar que la configuración de la cuenta se ha hecho correctamente comprobaremos las cuentas de azure:
 
-IMG: ACCOUNTAZURELIST.PNG
+![ACCOUNTAZURELIST](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/accountazurelist.png?raw=true)
 
-Y por úñtimo creamos una cuenta de almacenamiento:
+Y por último creamos una cuenta de almacenamiento:
 
     azure account storage create sergiogamarra
     
@@ -178,11 +176,7 @@ Y configuraremos nuestra cuenta con:
     
 y ya tendremos nuestra cuenta de almacenamiento creada y lista para usar:
 
-IMG:CUENTAALMACENAMIENTO.PNG
-
-## Ejercicio 9
-
-
+![CUENTAALMACENAMIENTO](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema4/cuentaalmacenamiento.png?raw=true)
 
 
 
