@@ -1,7 +1,7 @@
 # Tema 5 - Virtualización completa: uso de máquinas virtuales
 ## Alumno: Sergio Muñoz Gamarra
 
-# Ejercicio 1
+## Ejercicio 1
 
 Lo primero que debemos hacer es comprobar que nuestro procesador soporta virtualización con:
 
@@ -13,7 +13,7 @@ A continuación instalaremos todos los paquetes necesarios para usar kvm:
     sudo apt-get install qemu-kvm libvirt-bin virtinst virt-manager
     
     
-# Ejercicio 2
+## Ejercicio 2
     
 Crearé una máquina virtual con Slitaz, de la siguiente manera:
 
