@@ -12,6 +12,9 @@ A continuación instalaremos todos los paquetes necesarios para usar kvm:
 
     sudo apt-get install qemu-kvm libvirt-bin virtinst virt-manager
     
+    
+# Ejercicio 2
+    
 Crearé una máquina virtual con Slitaz, de la siguiente manera:
 
     modprobe kvm-intel
