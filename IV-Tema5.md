@@ -73,12 +73,41 @@ y ya podremos conectar al localhost por el puerto 2222:
 
 ## Ejercicio 5
 
-Para este ejercicio voy a utilizar la cuenta azure que me proporcionó. Lo primero que debemos hacer es buscar el sistema operativo que queremos instalar en la lista de SO ofrecidos por Microsoft con la orden:
+Para este ejercicio lo que haré primeramente será la creación de una máquina virtual con Ubuntu Server 12.04 LTS con arquitectura de 64 bits. Para su creación no le asignaré demasiados recursos debido a que la terea que vamos a llevar en ella es ligera, por lo que le asignaré un procesador de 512M.
 
-    azure vm image list
+Una vez creada la máquina virtual y teniendo en funcionamiento vamos a instalar el paquete de nginx en nuestro Ubuntu Server:
+
+    sudo apt-get install nginx
+
+Una vez instalado el paquete de nginx tan solo nos quedará importar las claves de nginx, lo cuál haremos a través de los siguientes comandos:
+
+    wget http://nginx.org/keys/nginx_signing.key
+    apt-ket add nginx_signing.key
+
+Después de tener las llaves importadas reiniciaremos el servicio:
+
+    service nginx restart
     
-y buscando entre todas las distribuciones de Ubuntu Server voy a utilizar: b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20121218-en-us-30GB, siendo Ubuntu Server 12.10 de 64 bits con 30 GB.
+Y ya tendremos en nuestro Ubuntu Server instalado y funcionando nginx, tan solo nos faltará consultar la IP de nuestra máquina virtual y comprobar que el index es el propio de nginx:
+
+IMG: 5-MV
+
+IMG: 5-INDEX
 
 
 
 
+
+## Ejercicio 7
+
+Para este ejercicio lo primero que necesitaremos serán los siguientes paquetes que vamos a instalar:
+
+    apt-get install ubuntu-vm-builder kvm virt-manager
+    
+Una vez tenemos instalados estos paquetes el siguiente paso será aprovisionar la máquina virtual (distribución, destino del disco, nombre de la MV y el dominio):
+
+     sudo vmbuilder kvm ubuntu --suite precise --flavour server -o --dest /home/sergio/Escritorio/ImgUbu.vdi --hostname IVVirtCompleta --domain IV
+    
+Este comando nos devuelve ImgUbu.vdi lista para ser utilizada como imagen para una máquina virtual.
+
+    
