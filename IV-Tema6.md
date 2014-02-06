@@ -117,5 +117,19 @@ Y vemos que todo ha sido instalado correctamente:
 IMG: chefFuncionaaa.png
 
 
+## Ejercicio 3
+
+```yaml
+    - uno: "dos"
+      tres:
+        - 4
+        - 5
+        - "Seis"
+        -
+          - siete: 8
+            nueve: 
+              - 10
+              - 11
+```
 
     
