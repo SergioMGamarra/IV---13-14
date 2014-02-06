@@ -90,12 +90,12 @@ Como dictorio crearé una carpeta llamada facultad que contendrá un fichero lla
 ```
 
 
-- Añadimsos a json la orden de que también se ejecute el contenido del directorio de vim:
+- Añadimsos a json la orden de que también se ejecute el contenido del directorio de facultad:
 
 ```json
     "run_list": [
         "recipe[nginx]",
-        "recipe[vim]"
+        "recipe[vim]",
         "recipe[facultad]"
     ]
 ```
@@ -106,6 +106,16 @@ Tras tenerlo todo configurado en chef tan solo nos queda la ejecución del sigui
 ```sh
     sudo chef-solo -c chef/solo.rb
 ```
+
+
+Tras finalizar la ejecución correctamente:
+
+IMG: 2-chefFinal.png
+
+Y vemos que todo ha sido instalado correctamente:
+
+IMG: chefFuncionaaa.png
+
 
 
     
