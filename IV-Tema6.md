@@ -35,6 +35,49 @@ Ahora añadimos nuestro fichero json al directorio, donde configuraremos las eje
         "run_list": [ "recipe[nginx]" ]
     }
     
-y ejecutaremos la receta con el siguiente comando:
+Ahora seguiremos los mismos pasos para la instalación del editor de texto vim:
+
+- Creamos el directorio para vim:
+
+    mkdir -p ~/chef/cookbooks/vim/recipes
+    
+- Dentro del directorio creamos la receta default.rb:
+
+    package 'vim'
+    
+- Añadimsos a json la orden de que también se ejecute el contenido del directorio de vim:
+
+    "run_list": [
+        "recipe[nginx]",
+        "recipe[vim]"
+    ]
+
+Como dictorio crearé una carpeta llamada facultad que contendrá un fichero llamado tareas.txt; para esta tarea seguiremos también los pasos anteriores:
+
+- Creamos el directorio para vim:
+
+    mkdir -p ~/chef/cookbooks/facultad/recipes
+    
+- Dentro del directorio creamos la receta default.rb:
+
+    directory '/home/facultad'
+    file "/home/facultad/tareas.txt" do
+      owner "sergio"
+      group "sergio"
+      mode 00764
+      action :create
+      content "Tareas para el periodo de exámenes de Febrero 13/14"
+    end
+
+- Añadimsos a json la orden de que también se ejecute el contenido del directorio de vim:
+
+    "run_list": [
+        "recipe[nginx]",
+        "recipe[vim]"
+        "recipe[facultad]"
+    ]
+
+
+Tras tenerlo todo configurado en chef tan solo nos queda la ejecución del siguiente comando:
 
     sudo chef-solo -c chef/solo.rb
