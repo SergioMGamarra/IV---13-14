@@ -39,13 +39,16 @@ Ahora seguiremos los mismos pasos para la instalación del editor de texto vim:
 
 - Creamos el directorio para vim:
 
+
     mkdir -p ~/chef/cookbooks/vim/recipes
     
 - Dentro del directorio creamos la receta default.rb:
 
+
     package 'vim'
     
 - Añadimsos a json la orden de que también se ejecute el contenido del directorio de vim:
+
 
     "run_list": [
         "recipe[nginx]",
@@ -56,9 +59,11 @@ Como dictorio crearé una carpeta llamada facultad que contendrá un fichero lla
 
 - Creamos el directorio para vim:
 
+
     mkdir -p ~/chef/cookbooks/facultad/recipes
     
 - Dentro del directorio creamos la receta default.rb:
+
 
     directory '/home/facultad'
     file "/home/facultad/tareas.txt" do
@@ -70,6 +75,7 @@ Como dictorio crearé una carpeta llamada facultad que contendrá un fichero lla
     end
 
 - Añadimsos a json la orden de que también se ejecute el contenido del directorio de vim:
+
 
     "run_list": [
         "recipe[nginx]",
