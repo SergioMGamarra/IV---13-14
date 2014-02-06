@@ -1,7 +1,5 @@
 #Ejercicios Tema 3
 
-Nota: Faltan algunas cosas por hacer aún (30-12-2013)
-
 ##Ejercicio 1
 
 Lo primero que tenemos que hacer para comenzar a trabajar este tema es la instalación de LXC, que utilizaremos para la creación de contenedores.
