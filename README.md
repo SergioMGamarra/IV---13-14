@@ -15,6 +15,8 @@ IV---13-14
 
 [Ejercicios Tema 5](https://github.com/SergioMGamarra/IV---13-14/blob/master/IV-Tema5.md)
 
+[Ejercicios Tema 6](https://github.com/SergioMGamarra/IV---13-14/blob/master/IV-Tema6.md)
+
 
 ## Ejercicios seminarios
 
