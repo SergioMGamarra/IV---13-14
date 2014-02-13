@@ -132,4 +132,10 @@ IMG: chefFuncionaaa.png
               - 11
 ```
 
+## Ejercicio 4
+
+Lo primero que tenemos que hacer para este ejercicio es crear una máquina virtual en azure:
+
+
+
     
