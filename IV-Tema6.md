@@ -174,3 +174,37 @@ ansible azure -m git -a "https://github.com/SergioMGamarra/pythonBasico.git dest
 Una vez que el repositorio ya tendremos nuestra aplicación en la MV.
 
 
+## Ejercicio 6
+
+Lo primero que debemos hacer es instalar vagrant en nuestra máquina anfitriona
+
+```sh
+sudo apt-get install vagrant
+```
+
+Lo que debemos hacer ahora es buscar una máquina virtual que se adapte a nuestras exigencias en la página de vagrant: www.vagrantbox.com. En mi caso voy a usar Debian Wheezy 7.0 amd64 (British) Puppet 3.2.1, Chef 11.4.4, built with Veewee 0.3.7; por lo que una vez elegida seguiremos los siguientes pasos:
+
+```sh
+vagrant box add Wheezy http://vagrantboxes.footballradar.com/wheezy64.box
+vagrant init Wheezy
+```
+
+Después de esto podemos ver que se ha creado un archivo llamado ```Vagrantfile``` en el directorio donde lo hemos descargado. Este directorio se utilizará para la configuración, pero en principio tan solo necesitaremos indicar el nombre del archivo .box, que ya viene hecho por defecto, quedando así:
+
+```ruby
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+  config.vm.box = "Wheezy"
+end
+```
+
+Una vez descargada y puesta a punto lo que vamos a hacer va a ser iniciarla y comprobar el correcto funcionamiento:
+
+```sh
+vagrant up
+vagrant ssh
+```
+
+IMG:VAGRANTFUNCIONANDO.PNG
