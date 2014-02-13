@@ -137,5 +137,40 @@ IMG: chefFuncionaaa.png
 Lo primero que tenemos que hacer para este ejercicio es crear una máquina virtual en azure:
 
 
+```sh
+azure vm create sergioansible b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-saucy-13_10-amd64-server-20140209-en-us-30GB sergiogamarra CONTRASEÑA --location "West Europe" --ssh
+```
 
-    
+Una vez instalada comprobamos que funciona bien a través de la interfaz web y probando que tenemos acceso a través de SSH.
+
+```sh
+ssh sergiogamarra@sergioansible.cloudapp.net
+```
+
+Una vez sabemos que tenemos acceso a la MV el siguiente paso será instalar ansible en nuestro ordenador:
+
+```sh
+sudo apt-get install ansible
+```
+
+y crearemos un fichero donde le indicaremos a ansible el host que debe utilizar y a partir de este archivo que contendrá ```[aure]sergioansible.cloudapp.net``` y le indicaremos a ansible que ese será el host que debe utilizar:
+
+```
+ export ANSIBLE_HOSTS=~/ansible_hosts
+```
+
+Una vez que ansible sabe la dirección del host a utilizar instalaré en la máquina virtual la sshpass necesario para la conexión con ansible:
+
+```sh
+sudo apt-get install sshpass
+```
+
+Ya tan solo nos quedará clonar el repositorio con nuestra maquina virtual, con el siguiente comando:
+
+```sh
+ansible azure -m git -a "https://github.com/SergioMGamarra/pythonBasico.git dest=~/ version=HEAD"
+```
+
+Una vez que el repositorio ya tendremos nuestra aplicación en la MV.
+
+
