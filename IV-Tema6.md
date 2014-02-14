@@ -214,7 +214,7 @@ IMG:VAGRANTFUNCIONANDO.PNG
 
 Lo que haremos será modificar el fichero Vagrantfile, y usaremos inline de forma que podremos introducir comandos shell, y lo que haremos será instalar el paquete nginx y reiniciaremos el servicio una vez instalado. El fichero quedará así:
 
-```sh
+```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -227,4 +227,4 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-Y ejecutaremos el comando ```sh Vagrant provision ```.
+Y ejecutaremos el comando ```Vagrant provision```.
