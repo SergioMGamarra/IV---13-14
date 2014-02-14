@@ -110,11 +110,11 @@ Tras tenerlo todo configurado en chef tan solo nos queda la ejecución del sigui
 
 Tras finalizar la ejecución correctamente:
 
-IMG: 2-chefFinal.png
+![2-chefFinal.png](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema6/2-chefFinal.png?raw=true)
 
 Y vemos que todo ha sido instalado correctamente:
 
-IMG: chefFuncionaaa.png
+![chefFuncionaaa.png](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema6/chefFuncionaaaaa.png?raw=true)
 
 
 ## Ejercicio 3
@@ -158,6 +158,8 @@ y crearemos un fichero donde le indicaremos a ansible el host que debe utilizar 
 ```
  export ANSIBLE_HOSTS=~/ansible_hosts
 ```
+
+![ANSIBLEHOST.PNG](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema6/4-AnsibleHost.png?raw=true)
 
 Una vez que ansible sabe la dirección del host a utilizar instalaré en la máquina virtual la sshpass necesario para la conexión con ansible:
 
@@ -207,7 +209,7 @@ vagrant up
 vagrant ssh
 ```
 
-IMG:VAGRANTFUNCIONANDO.PNG
+![VAGRANTFUNCIONANDO.PNG](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema6/VagrantFuncionando.png?raw=true)
 
 
 ## Ejercicio 7
