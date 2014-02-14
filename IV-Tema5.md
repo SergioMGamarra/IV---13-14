@@ -23,7 +23,8 @@ Crearé una máquina virtual con Slitaz, de la siguiente manera:
     
 Y la máquina virtual se abrirá:
 
-IMG: SLITAZ.PNG
+![slitaz](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/slitaz.png?raw=true)
+
 
 Lo siguiente que vamos a instalar es ttyLinux, a partir de los siguientes comandos:
 
@@ -35,19 +36,19 @@ Y para cambiar un poco y utilizar VMware y no qemu voy a instalar Damn Small Lin
 
 - Iniciamos la creación de la máquina virtual, indicando el fichero que contiene la imagen que vamos a utilizar:
 
-IMG: 2-FICHERO
+![2-FICHERO](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/2-Fichero.png?raw=true)
 
 - Seleccionamos el sistema operativo que contiene, en este caso Linux y a continuación el nombre de la máquina virtual (DSL) y la localización de la carpeta que contendrá la máquina virtual (/home/sergio/vmware/DSL).
 
 - Finalmente configuramos el reparto de recursos de la siguiente manera:
 
-IMG: Memoria
+![Memoria](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/2-Memoria.png?raw=true)
 
-IMG: Procesador
+![Procesador](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/2-Procesador.png?raw=true)
 
 Ejecutamos la máquina y ya tendremos Damn Small Linux funcionando en nuestra máquina:
 
-IMG: FuncionandoDSL
+![FuncionandoDSL](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/FuncionandoDSL.png?raw=true)
 
 ## Ejercicio 4
 
@@ -61,7 +62,7 @@ Como podemos ver en el segundo comando con la opción -m configuramos nuestra m�
 
 Una vez ejecutados dichos comandos ya tendremos funcionando nuestra máquina virtual:
 
-IMG: 4-Lubuntu
+![Lubuntu](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/4-LubuntuFUncionando.png?raw=true)
 
 Tan solo nos quedará configurar ssh y vcn, con el siguiente comando:
 
@@ -90,9 +91,9 @@ Después de tener las llaves importadas reiniciaremos el servicio:
     
 Y ya tendremos en nuestro Ubuntu Server instalado y funcionando nginx, tan solo nos faltará consultar la IP de nuestra máquina virtual y comprobar que el index es el propio de nginx:
 
-IMG: 5-MV
+![5-MV](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/6-MV.png?raw=true)
 
-IMG: 5-INDEX
+![INDEX](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/5-index.png?raw=true)
 
 
 
@@ -106,8 +107,11 @@ Para este ejercicio lo primero que necesitaremos serán los siguientes paquetes 
     
 Una vez tenemos instalados estos paquetes el siguiente paso será aprovisionar la máquina virtual (distribución, destino del disco, nombre de la MV y el dominio):
 
-     sudo vmbuilder kvm ubuntu --suite precise --flavour server -o --dest /home/sergio/Escritorio/ImgUbu.vdi --hostname IVVirtCompleta --domain IV
+    sudo vmbuilder vmw6 ubuntu --suite precise --flavour server --arch i386 -o --dest /home/sergio/Ubuntu --hostname Ubuntu --domain Ubunt
+
     
 Este comando nos devuelve ImgUbu.vdi lista para ser utilizada como imagen para una máquina virtual.
 
+![vmbuilder](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/vmbuilder.png?raw=true)
     
+![vmdk](https://github.com/SergioMGamarra/IV---13-14/blob/master/imgTema5/vmdk.png?raw=true)
